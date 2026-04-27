@@ -16,6 +16,7 @@
                 Background="{DynamicResource App.Card}"
                 BorderBrush="{DynamicResource App.Border}"
                 BorderThickness="1"
+                ClipToBounds="False"
                 Effect="{DynamicResource App.Shadow}">
             <Grid Margin="18">
                 <Grid.RowDefinitions>
