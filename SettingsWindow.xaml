@@ -29,7 +29,7 @@
 
                     <StackPanel>
                         <TextBlock Text="Configurações" FontSize="18" FontWeight="SemiBold" Foreground="{DynamicResource App.Text}" />
-                        <TextBlock Text="Tema, modo e histórico" Margin="0,4,0,0" Foreground="{DynamicResource App.Muted}" />
+                        <TextBlock Text="Preferências do aplicativo" Margin="0,4,0,0" Foreground="{DynamicResource App.Muted}" />
                     </StackPanel>
 
                     <Border Grid.Column="1"
@@ -44,99 +44,113 @@
                     </Border>
                 </Grid>
 
-                <StackPanel Grid.Row="1" Margin="0,16,0,0">
-                    <Border CornerRadius="16"
-                            Background="{DynamicResource App.Card2}"
-                            BorderBrush="{DynamicResource App.Border}"
-                            BorderThickness="1">
-                        <Grid Margin="14">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="Tema" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
-                            <ComboBox x:Name="ThemeCombo"
-                                      Grid.Row="1"
-                                      Margin="0,10,0,0"
-                                      SelectionChanged="ThemeCombo_SelectionChanged"
-                                      Style="{DynamicResource Calc.ComboBox}">
-                                <ComboBoxItem Content="Sistema" Tag="System" />
-                                <ComboBoxItem Content="Claro" Tag="Light" />
-                                <ComboBoxItem Content="Escuro" Tag="Dark" />
-                            </ComboBox>
-                        </Grid>
-                    </Border>
+                <TabControl Grid.Row="1"
+                            Margin="0,16,0,0"
+                            Style="{DynamicResource Calc.TabControl}">
+                    <TabItem Header="Geral" Style="{DynamicResource Calc.TabItem}">
+                        <StackPanel Margin="0,14,0,0">
+                            <Border CornerRadius="16"
+                                    Background="{DynamicResource App.Card2}"
+                                    BorderBrush="{DynamicResource App.Border}"
+                                    BorderThickness="1">
+                                <Grid Margin="14">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="Tema" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
+                                    <ComboBox x:Name="ThemeCombo"
+                                              Grid.Row="1"
+                                              Margin="0,10,0,0"
+                                              SelectionChanged="ThemeCombo_SelectionChanged"
+                                              Style="{DynamicResource Calc.ComboBox}">
+                                        <ComboBoxItem Content="Sistema" Tag="System" />
+                                        <ComboBoxItem Content="Claro" Tag="Light" />
+                                        <ComboBoxItem Content="Escuro" Tag="Dark" />
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
 
-                    <Border Margin="0,12,0,0"
-                            CornerRadius="16"
-                            Background="{DynamicResource App.Card2}"
-                            BorderBrush="{DynamicResource App.Border}"
-                            BorderThickness="1">
-                        <Grid Margin="14">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="Modo da Calculadora" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
-                            <ComboBox x:Name="ModeCombo"
-                                      Grid.Row="1"
-                                      Margin="0,10,0,0"
-                                      SelectionChanged="ModeCombo_SelectionChanged"
-                                      Style="{DynamicResource Calc.ComboBox}">
-                                <ComboBoxItem Content="Básica" Tag="Basic" />
-                                <ComboBoxItem Content="Científica" Tag="Scientific" />
-                            </ComboBox>
-                        </Grid>
-                    </Border>
+                            <Border Margin="0,12,0,0"
+                                    CornerRadius="16"
+                                    Background="{DynamicResource App.Card2}"
+                                    BorderBrush="{DynamicResource App.Border}"
+                                    BorderThickness="1">
+                                <Grid Margin="14">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="Modo da Calculadora" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
+                                    <ComboBox x:Name="ModeCombo"
+                                              Grid.Row="1"
+                                              Margin="0,10,0,0"
+                                              SelectionChanged="ModeCombo_SelectionChanged"
+                                              Style="{DynamicResource Calc.ComboBox}">
+                                        <ComboBoxItem Content="Básica" Tag="Basic" />
+                                        <ComboBoxItem Content="Científica" Tag="Scientific" />
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
 
-                    <Border Margin="0,12,0,0"
-                            CornerRadius="16"
-                            Background="{DynamicResource App.Card2}"
-                            BorderBrush="{DynamicResource App.Border}"
-                            BorderThickness="1">
-                        <Grid Margin="14">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="Ângulo (Científica)" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
-                            <ComboBox x:Name="AngleCombo"
-                                      Grid.Row="1"
-                                      Margin="0,10,0,0"
-                                      SelectionChanged="AngleCombo_SelectionChanged"
-                                      Style="{DynamicResource Calc.ComboBox}">
-                                <ComboBoxItem Content="Graus" Tag="Degrees" />
-                                <ComboBoxItem Content="Radianos" Tag="Radians" />
-                            </ComboBox>
-                        </Grid>
-                    </Border>
+                            <Border Margin="0,12,0,0"
+                                    CornerRadius="16"
+                                    Background="{DynamicResource App.Card2}"
+                                    BorderBrush="{DynamicResource App.Border}"
+                                    BorderThickness="1">
+                                <Grid Margin="14">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel>
+                                        <TextBlock Text="Histórico" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
+                                        <TextBlock Text="Mostrar painel de histórico na calculadora"
+                                                   Margin="0,4,0,0"
+                                                   Foreground="{DynamicResource App.Muted}" />
+                                    </StackPanel>
+                                    <CheckBox x:Name="HistoryCheck"
+                                              Grid.Column="1"
+                                              VerticalAlignment="Center"
+                                              Style="{DynamicResource Calc.Switch}"
+                                              IsChecked="True"
+                                              Checked="HistoryCheck_Changed"
+                                              Unchecked="HistoryCheck_Changed" />
+                                </Grid>
+                            </Border>
+                        </StackPanel>
+                    </TabItem>
 
-                    <Border Margin="0,12,0,0"
-                            CornerRadius="16"
-                            Background="{DynamicResource App.Card2}"
-                            BorderBrush="{DynamicResource App.Border}"
-                            BorderThickness="1">
-                        <Grid Margin="14">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <StackPanel>
-                                <TextBlock Text="Histórico" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
-                                <TextBlock Text="Mostrar painel de histórico na calculadora"
-                                           Margin="0,4,0,0"
-                                           Foreground="{DynamicResource App.Muted}" />
-                            </StackPanel>
-                            <CheckBox x:Name="HistoryCheck"
-                                      Grid.Column="1"
-                                      VerticalAlignment="Center"
-                                      Style="{DynamicResource Calc.Switch}"
-                                      IsChecked="True"
-                                      Checked="HistoryCheck_Changed"
-                                      Unchecked="HistoryCheck_Changed" />
-                        </Grid>
-                    </Border>
-                </StackPanel>
+                    <TabItem Header="Científica" Style="{DynamicResource Calc.TabItem}">
+                        <StackPanel Margin="0,14,0,0">
+                            <Border CornerRadius="16"
+                                    Background="{DynamicResource App.Card2}"
+                                    BorderBrush="{DynamicResource App.Border}"
+                                    BorderThickness="1">
+                                <Grid Margin="14">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock Text="Ângulo" Foreground="{DynamicResource App.Muted}" FontWeight="SemiBold" />
+                                    <ComboBox x:Name="AngleCombo"
+                                              Grid.Row="1"
+                                              Margin="0,10,0,0"
+                                              SelectionChanged="AngleCombo_SelectionChanged"
+                                              Style="{DynamicResource Calc.ComboBox}">
+                                        <ComboBoxItem Content="Graus" Tag="Degrees" />
+                                        <ComboBoxItem Content="Radianos" Tag="Radians" />
+                                    </ComboBox>
+                                </Grid>
+                            </Border>
+
+                            <TextBlock Margin="0,12,0,0"
+                                       Foreground="{DynamicResource App.Muted}"
+                                       TextWrapping="Wrap"
+                                       Text="Esta opção afeta sin/cos/tan (entrada) e asin/acos/atan (saída) no modo Científica." />
+                        </StackPanel>
+                    </TabItem>
+                </TabControl>
 
                 <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
                     <Button Content="Fechar" Width="120" Click="Close_Click" Style="{DynamicResource Calc.Button}" />
