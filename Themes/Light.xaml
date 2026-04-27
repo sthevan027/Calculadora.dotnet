@@ -308,6 +308,72 @@
         </Setter>
     </Style>
 
+    <ControlTemplate x:Key="Calc.KeyButtonControlTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Border x:Name="Root"
+                    CornerRadius="14"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Root" Property="Background" Value="#E9EDF7" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="Root" Property="Background" Value="#E2E7F2" />
+                <Setter TargetName="Root" Property="RenderTransform">
+                    <Setter.Value>
+                        <ScaleTransform ScaleX="0.985" ScaleY="0.985" />
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="Root" Property="RenderTransformOrigin" Value="0.5,0.5" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Root" Property="Opacity" Value="0.55" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="Calc.KeyButtonPrimaryControlTemplate" TargetType="{x:Type Button}">
+        <Grid>
+            <Border x:Name="Root"
+                    CornerRadius="14"
+                    Background="{TemplateBinding Background}"
+                    BorderBrush="{TemplateBinding BorderBrush}"
+                    BorderThickness="{TemplateBinding BorderThickness}">
+                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Border>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Root" Property="Background" Value="#60A5FA" />
+                <Setter TargetName="Root" Property="BorderBrush" Value="#60A5FA" />
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter TargetName="Root" Property="Background" Value="#2563EB" />
+                <Setter TargetName="Root" Property="BorderBrush" Value="#2563EB" />
+                <Setter TargetName="Root" Property="RenderTransform">
+                    <Setter.Value>
+                        <ScaleTransform ScaleX="0.985" ScaleY="0.985" />
+                    </Setter.Value>
+                </Setter>
+                <Setter TargetName="Root" Property="RenderTransformOrigin" Value="0.5,0.5" />
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter TargetName="Root" Property="Opacity" Value="0.55" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="Calc.ButtonKey" TargetType="{x:Type Button}" BasedOn="{StaticResource Calc.Button}">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template" Value="{StaticResource Calc.KeyButtonControlTemplate}" />
+    </Style>
+
     <Style x:Key="Calc.ButtonOp" TargetType="{x:Type Button}" BasedOn="{StaticResource Calc.Button}">
         <Setter Property="Background" Value="#EEF2F9" />
         <Setter Property="BorderBrush" Value="#CBD5E1" />
@@ -317,6 +383,18 @@
         <Setter Property="Background" Value="{DynamicResource App.Accent}" />
         <Setter Property="BorderBrush" Value="{DynamicResource App.Accent}" />
         <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style x:Key="Calc.ButtonOpKey" TargetType="{x:Type Button}" BasedOn="{StaticResource Calc.ButtonOp}">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template" Value="{StaticResource Calc.KeyButtonControlTemplate}" />
+    </Style>
+
+    <Style x:Key="Calc.ButtonPrimaryKey" TargetType="{x:Type Button}" BasedOn="{StaticResource Calc.ButtonPrimary}">
+        <Setter Property="Margin" Value="5" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template" Value="{StaticResource Calc.KeyButtonPrimaryControlTemplate}" />
     </Style>
 </ResourceDictionary>
 

@@ -149,34 +149,34 @@
 
                         <!-- Scientific rows -->
                         <UniformGrid x:Name="ScientificRow1" Grid.Row="0" Columns="5" Rows="1" Margin="0,0,0,10" Visibility="Collapsed">
-                            <Button Content="(" Click="Paren_Click" Tag="(" Style="{DynamicResource Calc.Button}" />
-                            <Button Content=")" Click="Paren_Click" Tag=")" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="π" Click="Const_Click" Tag="pi" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="e" Click="Const_Click" Tag="e" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="^" Click="Op_Click" Tag="^" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Content="(" Click="Paren_Click" Tag="(" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content=")" Click="Paren_Click" Tag=")" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="π" Click="Const_Click" Tag="pi" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="e" Click="Const_Click" Tag="e" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="^" Click="Op_Click" Tag="^" Style="{DynamicResource Calc.ButtonOpKey}" />
                         </UniformGrid>
 
                         <UniformGrid x:Name="ScientificRow2" Grid.Row="1" Columns="5" Rows="1" Margin="0,0,0,10" Visibility="Collapsed">
-                            <Button Content="sin" Click="Func_Click" Tag="sin" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="cos" Click="Func_Click" Tag="cos" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="tan" Click="Func_Click" Tag="tan" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="log" Click="Func_Click" Tag="log" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="√" Click="Func_Click" Tag="sqrt" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Content="sin" Click="Func_Click" Tag="sin" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="cos" Click="Func_Click" Tag="cos" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="tan" Click="Func_Click" Tag="tan" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="log" Click="Func_Click" Tag="log" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="√" Click="Func_Click" Tag="sqrt" Style="{DynamicResource Calc.ButtonOpKey}" />
                         </UniformGrid>
 
                         <UniformGrid x:Name="ScientificRow3" Grid.Row="2" Columns="5" Rows="1" Margin="0,0,0,12" Visibility="Collapsed">
-                            <Button Content="ln" Click="Func_Click" Tag="ln" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="abs" Click="Func_Click" Tag="abs" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="exp" Click="Func_Click" Tag="exp" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="asin" Click="Func_Click" Tag="asin" Style="{DynamicResource Calc.ButtonOp}" />
-                            <Button Content="acos" Click="Func_Click" Tag="acos" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Content="ln" Click="Func_Click" Tag="ln" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="abs" Click="Func_Click" Tag="abs" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="exp" Click="Func_Click" Tag="exp" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="asin" Click="Func_Click" Tag="asin" Style="{DynamicResource Calc.ButtonOpKey}" />
+                            <Button Content="acos" Click="Func_Click" Tag="acos" Style="{DynamicResource Calc.ButtonOpKey}" />
                         </UniformGrid>
 
                         <UniformGrid Grid.Row="3" Columns="4" Rows="1" Margin="0,0,0,12">
-                            <Button Content="C" Click="Clear_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="⌫" Click="Backspace_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="%" Click="Percent_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Content="÷" Click="Op_Click" Tag="/" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Content="C" Click="Clear_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="⌫" Click="Backspace_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="%" Click="Percent_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Content="÷" Click="Op_Click" Tag="/" Style="{DynamicResource Calc.ButtonOpKey}" />
                         </UniformGrid>
 
                         <Grid Grid.Row="4">
@@ -194,28 +194,28 @@
                             </Grid.ColumnDefinitions>
 
                             <!-- Row 1 -->
-                            <Button Grid.Row="0" Grid.Column="0" Content="7" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="0" Grid.Column="1" Content="8" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="0" Grid.Column="2" Content="9" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="0" Grid.Column="3" Content="×" Click="Op_Click" Tag="*" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Grid.Row="0" Grid.Column="0" Content="7" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="0" Grid.Column="1" Content="8" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="0" Grid.Column="2" Content="9" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="0" Grid.Column="3" Content="×" Click="Op_Click" Tag="*" Style="{DynamicResource Calc.ButtonOpKey}" />
 
                             <!-- Row 2 -->
-                            <Button Grid.Row="1" Grid.Column="0" Content="4" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="1" Grid.Column="1" Content="5" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="1" Grid.Column="2" Content="6" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="1" Grid.Column="3" Content="−" Click="Op_Click" Tag="-" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Grid.Row="1" Grid.Column="0" Content="4" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="1" Grid.Column="1" Content="5" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="1" Grid.Column="2" Content="6" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="1" Grid.Column="3" Content="−" Click="Op_Click" Tag="-" Style="{DynamicResource Calc.ButtonOpKey}" />
 
                             <!-- Row 3 -->
-                            <Button Grid.Row="2" Grid.Column="0" Content="1" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="2" Grid.Column="1" Content="2" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="2" Grid.Column="2" Content="3" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="2" Grid.Column="3" Content="+" Click="Op_Click" Tag="+" Style="{DynamicResource Calc.ButtonOp}" />
+                            <Button Grid.Row="2" Grid.Column="0" Content="1" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="2" Grid.Column="1" Content="2" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="2" Grid.Column="2" Content="3" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="2" Grid.Column="3" Content="+" Click="Op_Click" Tag="+" Style="{DynamicResource Calc.ButtonOpKey}" />
 
                             <!-- Row 4 -->
-                            <Button Grid.Row="3" Grid.Column="0" Content="±" Click="PlusMinus_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="3" Grid.Column="1" Content="0" Click="Digit_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="3" Grid.Column="2" Content="," Click="Decimal_Click" Style="{DynamicResource Calc.Button}" />
-                            <Button Grid.Row="3" Grid.Column="3" Content="=" Click="Equals_Click" Style="{DynamicResource Calc.ButtonPrimary}" />
+                            <Button Grid.Row="3" Grid.Column="0" Content="±" Click="PlusMinus_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="3" Grid.Column="1" Content="0" Click="Digit_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="3" Grid.Column="2" Content="," Click="Decimal_Click" Style="{DynamicResource Calc.ButtonKey}" />
+                            <Button Grid.Row="3" Grid.Column="3" Content="=" Click="Equals_Click" Style="{DynamicResource Calc.ButtonPrimaryKey}" />
                         </Grid>
                     </Grid>
 
@@ -226,7 +226,7 @@
                             CornerRadius="18"
                             Background="{DynamicResource App.Card2}"
                             BorderBrush="{DynamicResource App.Border}"
-                            BorderThickness="1"
+                            BorderThickness="0"
                             Visibility="Collapsed">
                         <Grid Margin="12">
                             <Grid.RowDefinitions>
