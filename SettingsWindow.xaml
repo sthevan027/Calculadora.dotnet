@@ -3,10 +3,13 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Configurações"
         Icon="{DynamicResource AppIcon}"
-        Width="420"
-        Height="680"
+        Width="448"
+        MinHeight="360"
+        SizeToContent="Height"
+        MaxHeight="720"
         WindowStartupLocation="CenterOwner"
         ResizeMode="NoResize"
+        UseLayoutRounding="True"
         Background="{DynamicResource App.Bg}">
     <Grid Margin="18">
         <Border CornerRadius="18"
@@ -17,7 +20,7 @@
             <Grid Margin="18">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
@@ -46,6 +49,7 @@
 
                 <TabControl Grid.Row="1"
                             Margin="0,16,0,0"
+                            VerticalAlignment="Top"
                             Style="{DynamicResource Calc.TabControl}">
                     <TabItem Header="Geral" Style="{DynamicResource Calc.TabItem}">
                         <StackPanel Margin="0,14,0,0">
@@ -152,7 +156,7 @@
                     </TabItem>
                 </TabControl>
 
-                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,0">
+                <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,16,0,4">
                     <Button Content="Fechar" Width="120" Click="Close_Click" Style="{DynamicResource Calc.Button}" />
                 </StackPanel>
             </Grid>
