@@ -7,6 +7,9 @@
     <SolidColorBrush x:Key="App.Border" Color="#2A2F3A" />
     <SolidColorBrush x:Key="App.Text" Color="#F3F5F7" />
     <SolidColorBrush x:Key="App.Muted" Color="#A7B0C0" />
+    <SolidColorBrush x:Key="App.HistoryText" Color="#D7DEE9" />
+    <SolidColorBrush x:Key="App.HistoryItemHoverBg" Color="#1A1F29" />
+    <SolidColorBrush x:Key="App.HistoryItemSelectedBg" Color="#203A65" />
     <SolidColorBrush x:Key="App.Accent" Color="#3B82F6" />
     <SolidColorBrush x:Key="App.AccentSoft" Color="#203A65" />
 
