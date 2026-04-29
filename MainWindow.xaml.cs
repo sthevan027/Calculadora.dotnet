@@ -189,8 +189,9 @@ public partial class MainWindow : Window
 
         var rhs = ParseEntry();
         var lhs = _accumulator.Value;
+        var op = _pendingOp;
 
-        double result = _pendingOp switch
+        double result = op switch
         {
             "+" => lhs + rhs,
             "-" => lhs - rhs,
@@ -199,7 +200,12 @@ public partial class MainWindow : Window
             _ => rhs
         };
 
-        ExpressionText.Text = $"{FormatNumber(lhs)} {PrettyOp(_pendingOp)} {FormatNumber(rhs)} =";
+        ExpressionText.Text = $"{FormatNumber(lhs)} {PrettyOp(op)} {FormatNumber(rhs)} =";
+        if (!double.IsNaN(result) && !double.IsInfinity(result))
+        {
+            var expression = $"{FormatNumber(lhs)} {PrettyOp(op)} {FormatNumber(rhs)}";
+            AddHistory(expression, FormatNumber(result));
+        }
         _pendingOp = null;
         _accumulator = null;
         _replaceEntry = true;
